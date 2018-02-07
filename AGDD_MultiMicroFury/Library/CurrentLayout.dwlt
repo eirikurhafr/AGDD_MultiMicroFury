@@ -199,8 +199,8 @@ MonoBehaviour:
     y: 0
     width: 202
     height: 460
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -392,9 +392,9 @@ MonoBehaviour:
     height: 439
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 26280000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 8ef8ffff8efbffff00000000
+    m_ExpandedIDs: 8cceffff8efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -475,9 +475,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 17.890017, y: 24.636955, z: 36.883884}
+    m_Target: {x: 21.204025, y: 23.454323, z: 29.927467}
     speed: 2
-    m_Value: {x: 17.890017, y: 24.636955, z: 36.883884}
+    m_Value: {x: 21.204025, y: 23.454323, z: 29.927467}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -500,9 +500,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.09579544, y: 0.88761777, z: -0.2146857, w: -0.39606562}
+    m_Target: {x: -0.0049451245, y: 0.9823442, z: -0.18516794, w: -0.026234092}
     speed: 2
-    m_Value: {x: -0.09579544, y: 0.88761777, z: -0.2146857, w: -0.39606562}
+    m_Value: {x: -0.0049451245, y: 0.9823442, z: -0.18516794, w: -0.026234092}
   m_Size:
     m_Target: 10
     speed: 2
@@ -740,19 +740,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: "D:\\Verkefni\\H\xF6nnun og \xDEr\xF3un T\xF6lvuleikja 2\\Constrained
     Game\\AGDD_MultiMicroFury\\AGDD_MultiMicroFury"
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 36270000
-    m_LastClickedID: 10038
+    m_SelectedIDs: 82270000
+    m_LastClickedID: 10114
     m_ExpandedIDs: 000000003627000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
