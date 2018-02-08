@@ -7,6 +7,14 @@ public class GameManager : MonoBehaviour {
     public float restartDelay = 1f;
     public GameObject completeLevelUI;
 
+    public void Update()
+    {
+        if(Input.GetKey("r") || Input.GetKeyDown("space"))
+        {
+            Invoke("Restart", restartDelay);
+        }
+    }
+
     public void EndGame()
     {
         if (gameHasEnded == false)
