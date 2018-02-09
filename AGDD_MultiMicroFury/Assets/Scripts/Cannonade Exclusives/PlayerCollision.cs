@@ -7,14 +7,9 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collisionInfo)
     {
-        if(collisionInfo.collider.tag == "Obstacle")
+        if (collisionInfo.collider.tag == "Bullet")
         {
-            movement.enabled = false;
-            FindObjectOfType<GameManager>().EndGame();
-        }
-        if (collisionInfo.collider.tag == "Capsule")
-        {
-            FindObjectOfType<GameManager>().EndGame();
+            FindObjectOfType<GameManager>().CompleteLevel();
         }
     }
 }

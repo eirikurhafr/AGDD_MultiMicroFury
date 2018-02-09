@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/CannonadeHowToPlay.unity
+    guid: 5b215dc0f42a59f48822ef941df74322
+  - enabled: 1
+    path: Assets/Cannonade.unity
+    guid: d70fc2b065e6a564e986877ec65b331c
