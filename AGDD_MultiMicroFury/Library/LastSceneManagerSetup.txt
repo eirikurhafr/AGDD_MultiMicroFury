@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/CannonadeHowToPlay.unity
+- path: Assets/Mash.unity
   isLoaded: 1
   isActive: 1
