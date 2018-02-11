@@ -30,6 +30,7 @@ public class ShootBolt : MonoBehaviour {
                 var newObject = Instantiate(ammunition, rb.transform); //Create the bullet
                 newObject.transform.position = rb.position + rb.transform.forward * distance; // Spawn the bullet in the right place
 
+                newObject.transform.LookAt(newObject.transform, transform.up);
                 newObject.GetComponent<Rigidbody>().AddForce(transform.up * shootForce);
             }
         }
