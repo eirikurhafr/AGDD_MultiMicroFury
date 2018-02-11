@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/PumpIt.unity
+- path: Assets/BallRace.unity
   isLoaded: 1
   isActive: 1
