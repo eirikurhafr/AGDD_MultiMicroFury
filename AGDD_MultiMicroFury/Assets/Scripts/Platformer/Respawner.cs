@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Respawer : MonoBehaviour {
+public class Respawner : MonoBehaviour {
     public Vector3 location;
 
 	// Use this for initialization
@@ -18,6 +18,6 @@ public class Respawer : MonoBehaviour {
 
     void OnCollisionEnter(Collision theCollision)
     {
-        //theCollision.position = location;
+        theCollision.gameObject.SendMessage("Respawn",location);
     }
-}
+} 

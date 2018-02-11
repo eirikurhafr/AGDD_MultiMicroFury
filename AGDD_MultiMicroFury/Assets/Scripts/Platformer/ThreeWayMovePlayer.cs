@@ -25,12 +25,6 @@ public class ThreeWayMovePlayer : MonoBehaviour
     {
         PlayerInput();
         GoingDown();
-
-        var rotationVector = transform.rotation.eulerAngles;
-        rotationVector.x = 0;
-        rotationVector.y = 0;
-        rotationVector.z = 0;
-        transform.rotation = Quaternion.Euler(rotationVector);
     }
 
     void PlayerInput()
@@ -75,11 +69,6 @@ public class ThreeWayMovePlayer : MonoBehaviour
         {
             canJump = true;
         }
-
-        if (theCollision.gameObject.name == "Respawner1")
-        {
-
-        }
     }
 
     void OnCollisionExit(Collision theCollision)
@@ -88,5 +77,10 @@ public class ThreeWayMovePlayer : MonoBehaviour
         {
             canJump = false;
         }
+    }
+
+    void Respawn(Vector3 location)
+    {
+        rb.position = location;
     }
 }
