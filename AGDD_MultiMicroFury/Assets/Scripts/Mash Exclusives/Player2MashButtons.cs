@@ -2,6 +2,8 @@
 
 public class Player2MashButtons : MonoBehaviour {
 
+    public GameObject scoreText;
+    public GameObject mashText;
     public string mashButton = "j";
     public int score = 0;
     private float changeTimer;
@@ -18,15 +20,15 @@ public class Player2MashButtons : MonoBehaviour {
     {
         if (changeSwitch <= 3.0f)
         {
-            mashButton = "a";
+            mashButton = "j";
         }
         else if (3.0f < changeSwitch && changeSwitch <= 6.0f)
         {
-            mashButton = "s";
+            mashButton = "k";
         }
         else
         {
-            mashButton = "d";
+            mashButton = "l";
         }
 
         changeTimer = Random.Range(1.0f, 10.0f);
@@ -43,7 +45,7 @@ public class Player2MashButtons : MonoBehaviour {
         }
 
         //Mashing the right button
-        if (Input.GetKey(mashButton))
+        if (Input.GetKeyDown(mashButton))
         {
             score++;
             Debug.Log("Player2Mashes");
