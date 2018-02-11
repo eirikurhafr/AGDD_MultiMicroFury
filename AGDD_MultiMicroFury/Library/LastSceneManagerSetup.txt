@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/BallRoller.unity
+- path: Assets/PumpIt.unity
   isLoaded: 1
   isActive: 1
