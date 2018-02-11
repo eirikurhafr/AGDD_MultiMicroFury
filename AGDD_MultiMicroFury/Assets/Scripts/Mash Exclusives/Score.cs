@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Score : MonoBehaviour {
 
@@ -9,27 +7,22 @@ public class Score : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        Invoke("EndGame()", 61.0f);
 	}
 
     void EndGame()
     {
         if(player2.score < player1.score)
         {
-
+            FindObjectOfType<GameManager>().CompleteLevel();
         }
         else if(player1.score < player2.score)
         {
-
+            FindObjectOfType<GameManager>().CompleteLevel2();
         }
         else
         {
-
+            FindObjectOfType<GameManager>().CompleteLevel3();
         }
     }
 }
