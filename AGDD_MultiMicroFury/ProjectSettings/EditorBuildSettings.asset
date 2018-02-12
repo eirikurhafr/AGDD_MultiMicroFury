@@ -17,3 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Mash.unity
     guid: 8c86764b6edcbaa41919714e14f4473f
+  - enabled: 1
+    path: Assets/DodgeGame.unity
+    guid: a8572bd3b10fc034cacd8dfbf543c2ea
+  - enabled: 1
+    path: Assets/PumpIt.unity
+    guid: e8963697f83896748ba148dcd7e867d1
+  - enabled: 1
+    path: Assets/Platformer.unity
+    guid: 6864a3e60aaebc54cac18311f4a59f9e
+  - enabled: 1
+    path: Assets/BallRoller.unity
+    guid: 8dab0d6ce4670404f8d190bc3be126c8

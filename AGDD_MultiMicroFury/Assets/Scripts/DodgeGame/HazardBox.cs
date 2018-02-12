@@ -8,8 +8,14 @@ public class HazardBox : MonoBehaviour {
     public GameObject winP1Text;
     public GameObject winP2Text;
     public GameObject Music;
+    GameObject manager;
     public bool canBeDestroyed = false;
-        
+
+    void Start()
+    {
+        manager = GameObject.Find("LevelManager");
+    }
+
     void OnCollisionEnter(Collision theCollision)
     {
         if(theCollision.gameObject.tag == "Player")
@@ -19,11 +25,13 @@ public class HazardBox : MonoBehaviour {
             {
                 winP2Text.SetActive(true);
                 Music.SendMessage("StartFadeOut");
+                manager.SendMessage("ChangeLevel");
             }
             else if(theCollision.gameObject.name == "Player 2" && !winP1Text.active && !winP2Text.active)
             {
                 winP1Text.SetActive(true);
                 Music.SendMessage("StartFadeOut");
+                manager.SendMessage("ChangeLevel");
             }
             spawner.SendMessage("TurnOff");
         }

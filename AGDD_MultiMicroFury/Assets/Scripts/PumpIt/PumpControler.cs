@@ -56,6 +56,7 @@ public class PumpControler : MonoBehaviour
     {
         if (transform.position.y >= 7.345)
         {
+            GameObject manager = GameObject.Find("LevelManager");
             if (isPlayer1)
             {
                 Debug.Log("Player2 wins");
@@ -64,6 +65,7 @@ public class PumpControler : MonoBehaviour
             {
                 Debug.Log("Player1 wins");
             }
+            manager.SendMessage("ChangeLevel");
         }
     }
 }
