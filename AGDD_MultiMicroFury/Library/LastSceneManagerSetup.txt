@@ -1,4 +1,8 @@
 sceneSetups:
-- path: Assets/PumpIt.unity
+<<<<<<< HEAD
+- path: Assets/CannonadeHowToPlay.unity
+=======
+- path: Assets/BallRace.unity
+>>>>>>> 0258ea3fc5ccbd0f982ea7a4306f87955c0fcda4
   isLoaded: 1
   isActive: 1

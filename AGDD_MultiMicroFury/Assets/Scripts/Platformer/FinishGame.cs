@@ -26,16 +26,19 @@ public class FinishGame : MonoBehaviour {
     {
         GameObject winText;
         GameObject loseText;
+        GameObject manager = GameObject.Find("LevelManager");
         canvas.SetActive(true);
         if(theCollision.gameObject.name == "Player 1")
         {
             winP1Text.SetActive(true);
             loseP2Text.SetActive(true);
+            manager.SendMessage("ChangeLevel");
         }
         else
         {
             winP2Text.SetActive(true);
             loseP1Text.SetActive(true);
+            manager.SendMessage("ChangeLevel");
         }
         Music.SendMessage("StartFadeOut");
     }
