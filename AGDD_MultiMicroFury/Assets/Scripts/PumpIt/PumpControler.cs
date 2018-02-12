@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PumpControler : MonoBehaviour
 {
+    public GameObject Music;
     public GameObject canvas;
     public GameObject winP1Text;
     public GameObject winP2Text;
@@ -72,6 +73,7 @@ public class PumpControler : MonoBehaviour
         {
             gameOver = true;
             canvas.SetActive(true);
+            Music.SendMessage("StartFadeOut");
             GameObject manager = GameObject.Find("LevelManager");
             if (isPlayer1)
             {
