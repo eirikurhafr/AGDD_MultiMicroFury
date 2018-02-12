@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BallRaceScript : MonoBehaviour {
 
+    public GameObject canvas;
+    public GameObject winP1Text;
+    public GameObject winP2Text;
     public bool isPlayer1;
     private Rigidbody rb;
     private Vector3 forward;
@@ -12,6 +15,7 @@ public class BallRaceScript : MonoBehaviour {
     private bool primary;
     private bool canJump;
     private bool primary2;
+    bool gameOver = false;
 
 
 
@@ -30,15 +34,26 @@ public class BallRaceScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (isPlayer1)
+        if(!gameOver)
         {
-            moveCharacter1();
+            if (isPlayer1)
+            {
+                moveCharacter1();
+            }
+            else
+            {
+                moveCharacter2();
+            }
+            hasLost();
         }
         else
         {
-            moveCharacter2();
+            if(Input.GetKeyDown("space"))
+            {
+                GameObject manager = GameObject.Find("LevelManager");
+                manager.SendMessage("ChangeLevel");
+            }
         }
-        hasLost();
     }
 
     private void moveCharacter1()
@@ -105,13 +120,18 @@ public class BallRaceScript : MonoBehaviour {
     {
         if (transform.position.x >= 31.339f)
         {
+            gameOver = true;
+            canvas.SetActive(true);
+            GameObject manager = GameObject.Find("LevelManager");
             if (isPlayer1)
             {
-                Debug.Log("Player2 wins");
+                manager.SendMessage("Player1Up");
+                winP1Text.SetActive(true);
             }
             else
             {
-                Debug.Log("Player1 wins");
+                manager.SendMessage("Player2Up");
+                winP2Text.SetActive(true);
             }
         }
     }

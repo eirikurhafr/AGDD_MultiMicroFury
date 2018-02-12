@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour {
 
+    public GameObject canvas;
+    public GameObject winP1Text;
+    public GameObject winP2Text;
     public bool isPlayer1;
     private Rigidbody rb;
     private Vector3 forwardV;
@@ -11,6 +14,7 @@ public class BallController : MonoBehaviour {
     private Vector3 leftV;
     private Vector3 rightV;
     public float speed;
+    bool gameOver = false;
 
 
     // Use this for initialization
@@ -34,12 +38,26 @@ public class BallController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (isPlayer1){
-            moveCharacter1(forwardV, backwardsV, leftV, rightV);
-        } else{
-            moveCharacter2(forwardV, backwardsV, leftV, rightV);
+        if(!gameOver)
+        {
+            if (isPlayer1)
+            {
+                moveCharacter1(forwardV, backwardsV, leftV, rightV);
+            }
+            else
+            {
+                moveCharacter2(forwardV, backwardsV, leftV, rightV);
+            }
+            hasLost();
         }
-        hasLost();
+        else
+        {
+            if (Input.GetKeyDown("space"))
+            {
+                GameObject manager = GameObject.Find("LevelManager");
+                manager.SendMessage("ChangeLevel");
+            }
+        }
     }
 
     private void moveCharacter1(Vector3 forward, Vector3 backwards, Vector3 left, Vector3 right)
@@ -89,15 +107,18 @@ public class BallController : MonoBehaviour {
         if(transform.position.y <= 0)
         {
             GameObject manager = GameObject.Find("LevelManager");
+            canvas.SetActive(true);
             if (isPlayer1)
             {
-                Debug.Log("Player2 wins");
+                manager.SendMessage("Player2Up");
+                winP2Text.SetActive(true);
             }
             else
             {
-                Debug.Log("Player1 wins");
+                manager.SendMessage("Player1Up");
+                winP1Text.SetActive(true);
             }
-            manager.SendMessage("ChangeLevel");
+            gameOver = true;
         }
     }
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
     static LevelManager Instance;
     public List<string> levelNames = new List<string>();
-    int player1Score;
-    int player2Score;
+    public int player1Score;
+    public int player2Score;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +31,20 @@ public class LevelManager : MonoBehaviour {
             Application.LoadLevel(levelNames[index]);
             levelNames.RemoveAt(index);
         }
+        else
+        {
+            Application.LoadLevel("EndScreen");
+        }
+    }
+
+    void Player1Up()
+    {
+        player1Score++;
+    }
+
+    void Player2Up()
+    {
+        player2Score++;
     }
 	
 	// Update is called once per frame
