@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour {
 
+    public GameObject Music;
     public GameObject canvas;
     public GameObject winP1Text;
     public GameObject winP2Text;
@@ -106,6 +107,7 @@ public class BallController : MonoBehaviour {
     {
         if(transform.position.y <= 0)
         {
+            Music.SendMessage("StartFadeOut");
             GameObject manager = GameObject.Find("LevelManager");
             canvas.SetActive(true);
             if (isPlayer1)
