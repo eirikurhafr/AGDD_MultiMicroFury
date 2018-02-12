@@ -16,11 +16,6 @@ public class Player1MashButtons : MonoBehaviour {
         changeTimer = Random.Range(1.0f, 10.0f);
     }
 
-    void updateUI()
-    {
-        
-    }
-
     void changeButton()
     {
         if(changeSwitch <= 3.0f)
@@ -37,6 +32,7 @@ public class Player1MashButtons : MonoBehaviour {
         }
 
         changeTimer = Random.Range(1.0f, 10.0f);
+        changeSwitch = Random.Range(1.0f, 9.0f);
     }
 
     // Update is called once per frame

@@ -4,15 +4,17 @@ public class Score : MonoBehaviour {
 
     public Player1MashButtons player1;
     public Player2MashButtons player2;
+    public GameObject UIDisable;
 
     // Use this for initialization
     void Start () {
-        Invoke("EndGame()", 61.0f);
+        Invoke("EndGame", 31);
 	}
 
     void EndGame()
     {
-        if(player2.score < player1.score)
+        UIDisable.SetActive(false);
+        if (player2.score < player1.score)
         {
             FindObjectOfType<GameManager>().CompleteLevel();
         }
