@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGDD_MultiMicroFury", "AGDD_MultiMicroFury.csproj", "{ACD258BA-42A2-A193-4D34-2A52A21E51CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGDD_MultiMicroFury.Plugins", "AGDD_MultiMicroFury.Plugins.csproj", "{B064FBDC-C57D-542B-8AB9-20FEF7F3EC15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGDD_MultiMicroFury.Editor.Plugins", "AGDD_MultiMicroFury.Editor.Plugins.csproj", "{D24A60C9-677C-F71D-E80B-237E4D64E410}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACD258BA-42A2-A193-4D34-2A52A21E51CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD258BA-42A2-A193-4D34-2A52A21E51CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD258BA-42A2-A193-4D34-2A52A21E51CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD258BA-42A2-A193-4D34-2A52A21E51CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B064FBDC-C57D-542B-8AB9-20FEF7F3EC15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B064FBDC-C57D-542B-8AB9-20FEF7F3EC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B064FBDC-C57D-542B-8AB9-20FEF7F3EC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B064FBDC-C57D-542B-8AB9-20FEF7F3EC15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D24A60C9-677C-F71D-E80B-237E4D64E410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24A60C9-677C-F71D-E80B-237E4D64E410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24A60C9-677C-F71D-E80B-237E4D64E410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D24A60C9-677C-F71D-E80B-237E4D64E410}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
