@@ -26,6 +26,14 @@ public class LevelManager : MonoBehaviour {
         }
 	}
 
+    void Update()
+    {
+        if(Input.GetKeyDown("p"))
+        {
+            ChangeLevel();
+        }
+    }
+
     void ChangeLevel()
     {
         if(levelNames.Count != 0)
@@ -59,9 +67,5 @@ public class LevelManager : MonoBehaviour {
     {
         return player1Score;
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

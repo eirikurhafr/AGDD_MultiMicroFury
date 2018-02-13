@@ -9,13 +9,22 @@ public class WinResetScript : MonoBehaviour {
     [SerializeField]
     private GameObject friendCube;
 
+    public GameObject canvas;
+    public GameObject winP1Text;
+    public GameObject winP2Text;
+    public GameObject Music;
+    GameObject manager;
+
     private Vector3 ballLoc;
     private Vector3 cubeLoc;
     private Rigidbody rb;
     private Rigidbody rb2;
+    bool gameOver;
 
     // Use this for initialization
     void Start () {
+        gameOver = false;
+        manager = GameObject.Find("LevelManager");
         ballLoc = transform.position;
         cubeLoc = friendCube.transform.position;
         rb = GetComponent<Rigidbody>();
@@ -24,8 +33,14 @@ public class WinResetScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
-	}
+        if (gameOver)
+        {
+            if (Input.GetKeyDown("space"))
+            {
+                manager.SendMessage("ChangeLevel");
+            }
+        }
+    }
 
     void OnTriggerEnter(Collider theCollision)
     {
@@ -45,15 +60,23 @@ public class WinResetScript : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter(Collider theCollision)
+    void OnCollisionEnter(Collision theCollision)
     {
-        if (theCollision.gameObject.tag == "Finish" && !isPlayer1)
+        if (theCollision.gameObject.tag == "Finish" && !isPlayer1 && !gameOver)
         {
-
+            canvas.SetActive(true);
+            gameOver = true;
+            winP2Text.SetActive(true);
+            Music.SendMessage("StartFadeOut");
+            manager.SendMessage("Player2Up");
         }
-        if (theCollision.gameObject.tag == "Bullet" && isPlayer1)
+        if (theCollision.gameObject.tag == "Bullet" && isPlayer1 && !gameOver)
         {
-
+            canvas.SetActive(true);
+            gameOver = true;
+            winP1Text.SetActive(true);
+            Music.SendMessage("StartFadeOut");
+            manager.SendMessage("Player1Up");
         }
     }
 

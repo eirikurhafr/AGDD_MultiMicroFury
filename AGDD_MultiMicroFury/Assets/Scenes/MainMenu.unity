@@ -934,7 +934,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelNames:
+  - BallFlinger
+  - BallRaceHowTo
+  - BallRollerHowTo
   - CannonadeHowToPlay
+  - PlatformerHowTo
+  - PumpItHowTo
+  - DodgeGameHowTo
   player1Score: 0
   player2Score: 0
 --- !u!4 &1917122158
