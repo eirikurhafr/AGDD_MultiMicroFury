@@ -18,21 +18,23 @@ public class ShootBolt : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        cooldownCounter -= Time.deltaTime;
+        //cooldownCounter -= Time.deltaTime;
 
-        if (cooldownCounter < 0)
+        //if (cooldownCounter < 0)
 
-        {
-            cooldownCounter = cooldownMax;
+        //{
+            //cooldownCounter = cooldownMax;
             //If the fire button is pressed, then open fire!
-            if (Input.GetKey(key))
+            if (Input.GetKeyDown(key))
             {
-                var newObject = Instantiate(ammunition, rb.transform); //Create the bullet
-                newObject.transform.position = rb.position + rb.transform.forward * distance; // Spawn the bullet in the right place
+                var newObject = Instantiate(ammunition, gameObject.transform); //Create the bullet
+                newObject.transform.position = transform.position + rb.transform.forward * distance; // Spawn the bullet in the right place
 
                 newObject.transform.LookAt(newObject.transform, transform.up);
                 newObject.GetComponent<Rigidbody>().AddForce(transform.up * shootForce);
+                Destroy(newObject, 3.0f);
             }
-        }
-	}
+            
+        //}
+    }
 }

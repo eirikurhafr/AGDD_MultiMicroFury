@@ -36,28 +36,7 @@ public class LevelManager : MonoBehaviour {
         }
         else
         {
-            asyncLoadLevel = SceneManager.LoadSceneAsync("EndScreen", LoadSceneMode.Single);
-            while (!asyncLoadLevel.isDone)
-            {
-                print("Loading the Scene");
-            }
-            Text player1Text = GameObject.Find("Player1Text").GetComponent<Text>();
-            Text player2Text = GameObject.Find("Player2Text").GetComponent<Text>();
-            Text whoWonText = GameObject.Find("WhoWon").GetComponent<Text>();
-            player1Text.text = "Player 1 Score: " + player1Score;
-            player2Text.text = "Player 2 Score: " + player2Score;
-            if(player1Score > player2Score)
-            {
-                whoWonText.text = "Player 1 Won The Game!";
-            }
-            else if(player2Score > player1Score)
-            {
-                whoWonText.text = "Player 2 Won The Game!";
-            }
-            else if(player1Score == player2Score)
-            {
-                whoWonText.text = "It's a tie!";
-            }
+            Application.LoadLevel("EndScreen");
         }
     }
 
@@ -69,6 +48,16 @@ public class LevelManager : MonoBehaviour {
     void Player2Up()
     {
         player2Score++;
+    }
+
+    public int getPlayer2Score()
+    {
+        return player2Score;
+    }
+
+    public int getPlayer1Score()
+    {
+        return player1Score;
     }
 	
 	// Update is called once per frame
