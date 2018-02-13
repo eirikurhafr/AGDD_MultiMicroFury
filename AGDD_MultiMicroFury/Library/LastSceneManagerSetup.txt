@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scenes/BallFlinger/BallFlinger.unity
+  isLoaded: 1
+  isActive: 1
