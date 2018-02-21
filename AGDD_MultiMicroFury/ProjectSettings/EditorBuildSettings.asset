@@ -4,4 +4,52 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 3306c51df96461d46842fad32f9dd7d8
+  - enabled: 1
+    path: Assets/Scenes/BallFlinger/BallFlinger.unity
+    guid: 6c7a8bf611a1b544ebfe0fbda65e546a
+  - enabled: 1
+    path: Assets/Scenes/BallRace/BallRaceHowTo.unity
+    guid: b66bc93460ecb0743bc536b3ded6003a
+  - enabled: 1
+    path: Assets/Scenes/BallRace/BallRace.unity
+    guid: dc2144e7c6dc4904db1671075156bb5f
+  - enabled: 1
+    path: Assets/Scenes/BallRoller/BallRollerHowTo.unity
+    guid: 9f6e8a38aec6a744ea851382cbb2c1a3
+  - enabled: 1
+    path: Assets/Scenes/BallRoller/BallRoller.unity
+    guid: 8dab0d6ce4670404f8d190bc3be126c8
+  - enabled: 1
+    path: Assets/Scenes/Cannonade/CannonadeHowToPlay.unity
+    guid: 5b215dc0f42a59f48822ef941df74322
+  - enabled: 1
+    path: Assets/Scenes/Cannonade/Cannonade.unity
+    guid: d70fc2b065e6a564e986877ec65b331c
+  - enabled: 1
+    path: Assets/Scenes/DodgeGame/DodgeGameHowTo.unity
+    guid: a31dcd9a74b2d6f459eafa445105aa41
+  - enabled: 1
+    path: Assets/Scenes/DodgeGame/DodgeGame.unity
+    guid: a8572bd3b10fc034cacd8dfbf543c2ea
+  - enabled: 1
+    path: Assets/Scenes/HoleFiller/HoleFiller.unity
+    guid: 16399986d0b5dec448c10d20c41a8913
+  - enabled: 1
+    path: Assets/Scenes/Mash/MashHowToPlay.unity
+    guid: 513d76cd6fd5a2d43b9557c1126e4f16
+  - enabled: 1
+    path: Assets/Scenes/Mash/Mash.unity
+    guid: 8c86764b6edcbaa41919714e14f4473f
+  - enabled: 1
+    path: Assets/Scenes/Platformer/PlatformerHowTo.unity
+    guid: 1f25152f36983144bb2cc909a34ae008
+  - enabled: 1
+    path: Assets/Scenes/Platformer/Platformer.unity
+    guid: 6864a3e60aaebc54cac18311f4a59f9e
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: c76c145c4ebaaeb4db209e32451b8ea6
